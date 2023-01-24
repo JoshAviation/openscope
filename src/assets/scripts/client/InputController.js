@@ -139,6 +139,7 @@ export default class InputController {
         this.$canvases.off('mousedown', this.onMouseDownHandler);
         this.$canvases.off('dblclick', this.onMouseDblclickHandler);
         this.$body.removeEventListener('contextmenu', (event) => event.preventDefault());
+
         this._eventBus.off(EVENT.STRIP_CLICK, this.selectAircraftByCallsign);
 
         return this.destroy();
@@ -154,7 +155,9 @@ export default class InputController {
         this.$window = null;
         this.$commandInput = null;
         this.$canvases = null;
+
         this._autocompleteController = null;
+
         this.input = input;
         this.input.callsign = '';
         this.input.history = [];
@@ -184,6 +187,8 @@ export default class InputController {
      *
      * This clears the current aircraft callsign from the command input
      * and de-selects an active aircraft's:
+     *
+     *
      * - flight strip
      * - radar target
      *
@@ -198,6 +203,7 @@ export default class InputController {
         // eslint-disable-next-line no-undef
         prop.input.command = '';
         this.input.callsign = '';
+
         this.$commandInput.val('');
         this._eventBus.trigger(EVENT.DESELECT_AIRCRAFT, {});
     }
