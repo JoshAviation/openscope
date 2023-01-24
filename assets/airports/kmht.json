@@ -19,7 +19,7 @@
     },
     "has_terrain": false,
     "wind": {
-        "angle": 346,
+        "angle": 340,
         "speed": 7
     },
     "arrivalRunway": "35",
@@ -122,5 +122,31 @@
             ],
             "ils": [true, true]
         }
-    ]
-}
+    ],
+    "sids": {
+        "MHT1": {
+            "icao": "MHT1",
+            "name": "Manchester One",
+            "altitude": 3000,
+            "rwy": {
+                "KMHT6" : ["CAM","CON","GDM","ENE","BOS"],
+                "KMHT24": ["CAM","CON","GDM","ENE","BOS"],
+                "KMHT17": ["CAM","CON","GDM","ENE","BOS"],
+                "KMHT35": ["CAM","CON","GDM","ENE","BOS"]
+            },
+            "exitPoints": {
+                "BOS":["BOS"],
+                "CAM":["CAM"],
+                "CON":["CON"],
+                "ENE":["ENE"],
+                "GDM":["GDM"]
+            },
+            "draw": [
+                ["BOS"],
+                ["CAM"],
+                ["CON"],
+                ["ENE"],
+                ["GDM"]
+            ]
+        }
+}}
